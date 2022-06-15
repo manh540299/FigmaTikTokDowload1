@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/FigmaTikTokDowload/app/src/main/res/drawable/bgrdown.xml" value="0.2205" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/FigmaTikTokDowload/app/src/main/res/drawable/bgrhow.xml" value="0.2205" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/FigmaTikTokDowload/app/src/main/res/drawable/bgrpastelink.xml" value="0.2205" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/FigmaTikTokDowload/app/src/main/res/drawable/bgrpatse.xml" value="0.2205" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/FigmaTikTokDowload/app/src/main/res/drawable/bot_nav_color.xml" value="0.2205" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/FigmaTikTokDowload/app/src/main/res/drawable/explore.xml" value="0.1" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/FigmaTikTokDowload/app/src/main/res/drawable/home.xml" value="0.1" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/FigmaTikTokDowload/app/src/main/res/drawable/trending.xml" value="0.1" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/FigmaTikTokDowload/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/FigmaTikTokDowload/app/src/main/res/layout/fragment_explore.xml" value="0.18541666666666667" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/FigmaTikTokDowload/app/src/main/res/layout/fragment_home.xml" value="0.33" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/FigmaTikTokDowload/app/src/main/res/layout/fragment_my_file.xml" value="0.18541666666666667" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/FigmaTikTokDowload/app/src/main/res/menu/menu_bot_nav.xml" value="0.3614583333333333" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

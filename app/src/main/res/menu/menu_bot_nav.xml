@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<item android:id="@+id/home"
+    android:enabled="true"
+    android:icon="@drawable/home"
+    android:iconTint="@color/white"
+    android:title="Home" />
+    <item android:id="@+id/myfile"
+        android:enabled="true"
+        android:icon="@drawable/myfile"
+        android:title="My File" />
+    <item android:id="@+id/trending"
+        android:enabled="true"
+        android:icon="@drawable/trending"
+        android:title="Trending"/>
+    <item android:id="@+id/explore"
+        android:enabled="true"
+        android:icon="@drawable/explore"
+        android:title="Explore" />
+</menu>
