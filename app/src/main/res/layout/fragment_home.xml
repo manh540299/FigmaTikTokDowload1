@@ -1,130 +1,259 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".view.activity.MainActivity">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <RelativeLayout
-        android:background="@color/white"
-        android:id="@+id/relativeLayout"
+    <data>
+        <import type="android.view.View"/>
+        <import type="android.R"/>
+          <variable
+              name="data"
+              type="com.example.figmatiktokdowload.view.viewmodel.HomeViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_height="match_parent"
+        tools:context=".view.activity.MainActivity">
 
-        <ImageView
-            android:id="@+id/setting"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:layout_alignParentEnd="true"
-            android:layout_centerVertical="true"
-            android:layout_marginEnd="18.27dp"
-            android:src="@drawable/out_line" />
-        <ImageView
-            android:id="@+id/vm"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:layout_toLeftOf="@id/tv"
-            android:layout_centerVertical="true"
-            android:layout_marginEnd="13dp"
-            android:src="@drawable/ic_vm" />
-        <ImageView
-            android:id="@+id/tv"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:layout_toLeftOf="@id/setting"
-            android:layout_centerVertical="true"
-            android:layout_marginEnd="13dp"
-            android:src="@drawable/ic_tv" />
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="60dp"
+        <RelativeLayout
             android:background="@color/white"
-            android:gravity="center"
-            android:layout_marginStart="10dp"
-            android:text="Tiktok Downloader"
-            android:textColor="@color/black"
-            android:textSize="16sp"
-            android:textStyle="bold" />
-    </RelativeLayout>
-    <EditText
-        android:background="@drawable/bgrpastelink"
-        android:id="@+id/edtlink"
-        android:layout_width="261dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="116dp"
-        android:paddingStart="16dp"
-        android:paddingEnd="1dp"
-        android:gravity="center_vertical"
-        android:hint="please paste link here"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-    <TextView
-        android:layout_width="59dp"
-        android:layout_height="46dp"
-        app:layout_constraintStart_toEndOf="@id/edtlink"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="116dp"
-        android:background="@drawable/bgrpatse"
-        android:text="Paste"
-        android:textColor="@color/white"
-        android:gravity="center"
-        app:layout_constraintTop_toTopOf="parent"/>
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="8dp"
-        android:text="Link fail.Please renew link."
-        android:textColor="#EA4359"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtlink" />
+            <ImageView
+                android:id="@+id/setting"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="18.27dp"
+                android:src="@drawable/out_line" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="16dp"
-        android:text="@string/tvdownloadvid"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:textColor="@color/white"
-        android:textSize="18dp"
-        android:gravity="center"
-        android:background="@drawable/bgrdown"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtlink" />
-    <RelativeLayout
-        android:background="@drawable/bgrhow"
-        android:gravity="center"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="516dp"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginStart="105dp"
-        android:layout_width="120dp"
-        android:layout_height="35dp">
+            <ImageView
+                android:id="@+id/vm"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_toLeftOf="@id/tv"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="13dp"
+                android:src="@drawable/ic_vm" />
+
+            <ImageView
+                android:id="@+id/tv"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="13dp"
+                android:layout_toLeftOf="@id/setting"
+                android:src="@drawable/ic_tv" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:layout_marginStart="10dp"
+                android:text="Tiktok Downloader"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/edtlink"
+            android:layout_width="261dp"
+            android:layout_height="46dp"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/bgrpastelink"
+            android:drawableEnd="@drawable/ic_del_text"
+            android:ellipsize="end"
+            android:layout_marginTop="24dp"
+            android:gravity="center_vertical"
+            android:hint="please paste link here"
+            android:maxLines="1"
+            android:paddingStart="16dp"
+            android:paddingEnd="10dp"
+            android:text="@={data.link}"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
+
         <TextView
-            android:id="@+id/text"
-            android:textColor="@color/black"
+            android:id="@+id/btn_patse"
+            android:layout_width="59dp"
+            android:layout_height="46dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="84dp"
+            android:background="@drawable/bgrpatse"
+            android:gravity="center"
+            android:text="Paste"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@id/edtlink"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvlinkfail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="How To Use?"/>
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:visibility="@{data.check? View.VISIBLE:View.INVISIBLE}"
+            android:text="Link fail.Please renew link."
+            android:textColor="#EA4359"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtlink" />
 
         <ImageView
-            android:layout_width="15dp"
-            android:layout_height="15dp"
-            android:layout_marginStart="5dp"
-            android:layout_toEndOf="@id/text"
+            android:id="@+id/image_video"
+            android:layout_width="60dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="64dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btndownload" />
+
+        <TextView
+            android:id="@+id/tvtitle"
+            android:layout_width="153dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:maxLines="2"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/image_video"
+            app:layout_constraintTop_toTopOf="@+id/image_video" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="153dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:maxLines="2"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/image_video"
+            app:layout_constraintTop_toBottomOf="@+id/tvtitle" />
+
+        <TextView
+            android:id="@+id/btndownload"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/bgrdown_error"
+            android:gravity="center"
+            android:onClick="@{()->data.onDownLoad()}"
+            android:text="@string/tvdownloadvid"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtlink" />
+
+        <RelativeLayout
+            android:layout_width="120dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="104dp"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/bgrhow"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView4">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@id/text"
+                android:scaleType="centerCrop"
+                android:src="@drawable/circle_right" />
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="How To Use?"
+                android:textColor="@color/black" />
+
+
+        </RelativeLayout>
+
+        <TextView
+
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/bgrsecondown"
+            android:gravity="center"
+            android:onClick="@{()->data.onDownLoad()}"
+            android:text="Download Video(No-Wartermark)"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:visibility="@{data.check2?View.VISIBLE:View.GONE}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_video" />
+
+        <TextView
+
+
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/bgrdown3"
+            android:gravity="center"
+            android:onClick="@{()->data.onDownLoad()}"
+            android:text="Download Audio"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:visibility="@{data.check2?View.VISIBLE:View.GONE}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/bgrdown3"
+            android:gravity="center"
+            android:onClick="@{()->data.onDownLoad()}"
+            android:text="Download Thumbnail(JPG)"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:visibility="@{data.check2?View.VISIBLE:View.GONE}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="14dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="16dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/circle_right"/>
+            android:visibility="@{data.check2?View.VISIBLE:View.GONE}"
+            android:src="@drawable/ic_cam"
+            app:layout_constraintStart_toStartOf="@+id/textView2"
+            app:layout_constraintTop_toTopOf="@+id/textView2" />
 
-
-
-    </RelativeLayout>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
