@@ -1,26 +1,14 @@
 package com.example.figmatiktokdowload.view.activity
 
-import android.content.ClipboardManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.core.content.getSystemService
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentTransaction
-import androidx.lifecycle.ViewModelProvider
 import com.example.figmatiktokdowload.R
-import com.example.figmatiktokdowload.view.`interface`.ApiService
 import com.example.figmatiktokdowload.view.fragment.ExploreFrag
 import com.example.figmatiktokdowload.view.fragment.HomeFrag
 import com.example.figmatiktokdowload.view.fragment.MyFileFrag
 import com.example.figmatiktokdowload.view.fragment.TrendingFrag
-import com.example.figmatiktokdowload.view.model.api.Api
-import com.example.figmatiktokdowload.view.viewmodel.HomeViewModel
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
 
 class MainActivity : AppCompatActivity() {
     lateinit var bottom_nav: BottomNavigationView

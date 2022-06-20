@@ -1,26 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="#E5E5E5"
-    xmlns:tools="http://schemas.android.com/tools">
-
-    <data>
-
-        <import type="android.view.View" />
-
-        <import type="android.R" />
-
-        <variable
-            name="data"
-            type="com.example.figmatiktokdowload.view.viewmodel.HomeViewModel" />
-    </data>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".view.activity.MainActivity">
-
-
+    tools:context=".view.activity.MainActivity"
+    xmlns:android="http://schemas.android.com/apk/res/android">
         <EditText
             android:id="@+id/edtlink"
             android:layout_width="261dp"
@@ -35,7 +20,6 @@
             android:maxLines="1"
             android:paddingStart="16dp"
             android:paddingEnd="10dp"
-            android:text="@={data.link}"
             android:textSize="14sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -60,8 +44,8 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="4dp"
             android:text="Link fail.Please renew link."
+            android:visibility="invisible"
             android:textColor="#EA4359"
-            android:visibility="@{data.check? View.VISIBLE:View.INVISIBLE}"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/edtlink" />
 
@@ -92,7 +76,7 @@
             android:layout_marginStart="14dp"
             android:layout_marginTop="26dp"
             android:maxLines="2"
-            android:text="@{data.title}"
+            android:textColor="@color/black"
             android:textSize="14sp"
             android:textStyle="bold"
             app:layout_constraintStart_toEndOf="@+id/image_video"
@@ -105,10 +89,8 @@
             android:layout_marginStart="14dp"
             android:layout_marginTop="8dp"
             android:maxLines="2"
-            android:text="@{data.nickname}"
             android:textColor="#686868"
             android:textSize="14sp"
-
             app:layout_constraintStart_toEndOf="@+id/image_video"
             app:layout_constraintTop_toBottomOf="@+id/tvtitle" />
 
@@ -121,7 +103,6 @@
             android:layout_marginEnd="16dp"
             android:background="@drawable/bgrdown_error"
             android:gravity="center"
-            android:onClick="@{()->data.onDownLoad()}"
             android:text="@string/tvdownloadvid"
             android:textColor="@color/white"
             android:textSize="18dp"
@@ -171,7 +152,7 @@
             android:paddingTop="13dp"
             android:paddingEnd="32dp"
             android:paddingBottom="13dp"
-            android:visibility="@{data.check2?View.VISIBLE:View.GONE}"
+            android:visibility="invisible"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/image_video">
@@ -191,7 +172,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:onClick="@{()->data.onDownLoadVideo()}"
                 android:text="Download Video(No-Wartermark)"
                 android:textColor="@color/white"
                 android:textSize="18dp" />
@@ -206,8 +186,8 @@
             android:paddingStart="100dp"
             android:paddingTop="13dp"
             android:paddingEnd="100dp"
+            android:visibility="invisible"
             android:paddingBottom="10dp"
-            android:visibility="@{data.check2?View.VISIBLE:View.GONE}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/downvid">
@@ -226,7 +206,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_toRightOf="@id/imageView"
-                android:onClick="@{()->data.onDownLoad()}"
                 android:text="Download Audio"
                 android:textColor="@color/black"
                 android:textSize="18dp" />
@@ -239,13 +218,12 @@
             android:layout_marginStart="28dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="28dp"
+            android:visibility="invisible"
             android:background="@drawable/bgrdown3"
             android:gravity="center"
-            android:onClick="@{()->data.onDownLoad()}"
             android:text="Download Thumbnail(JPG)"
             android:textColor="@color/black"
             android:textSize="18dp"
-            android:visibility="@{data.check2?View.VISIBLE:View.GONE}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -253,13 +231,14 @@
 
 
         <ImageView
+            android:id="@+id/img_pic"
             android:layout_width="22dp"
             android:layout_height="16dp"
             android:layout_marginStart="40dp"
             android:layout_marginTop="16dp"
             android:scaleType="centerInside"
             android:src="@drawable/ic_picture"
-            android:visibility="@{data.check2?View.VISIBLE:View.GONE}"
+            android:visibility="invisible"
             app:layout_constraintStart_toStartOf="@+id/textView4"
             app:layout_constraintTop_toTopOf="@+id/textView4" />
 
@@ -277,4 +256,3 @@
             app:layout_constraintTop_toBottomOf="@+id/downvid" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-</layout>

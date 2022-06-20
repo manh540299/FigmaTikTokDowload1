@@ -5,6 +5,7 @@
     android:orientation="vertical">
 
     <TextView
+        android:id="@+id/tvdate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -12,6 +13,7 @@
         android:textColor="@color/black"
         android:textStyle="bold" />
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list_vid"
         android:layout_width="match_parent"
         android:layout_marginTop="4dp"
         android:layout_height="wrap_content"/>

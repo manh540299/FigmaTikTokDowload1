@@ -9,7 +9,7 @@ data class Video(
     val cover: Cover,
     val download_addr: DownloadAddr,
     val download_suffix_logo_addr: DownloadSuffixLogoAddr,
-    val duration: Int,
+    val duration: Long,
     val dynamic_cover: DynamicCover,
     val has_download_suffix_logo_addr: Boolean,
     val has_watermark: Boolean,

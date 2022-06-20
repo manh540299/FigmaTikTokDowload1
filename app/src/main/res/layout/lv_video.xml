@@ -60,6 +60,7 @@
         android:layout_height="18dp"
         android:layout_marginStart="4dp"
         android:layout_marginTop="57dp"
+        android:visibility="invisible"
         android:layout_toEndOf="@id/tvig" />
 
 </RelativeLayout>
