@@ -13,12 +13,16 @@
         <entry key="..\:/Users/Admin/AndroidStudioProjects/FigmaTikTokDowload/app/src/main/res/drawable/bot_nav_color.xml" value="0.2205" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/FigmaTikTokDowload/app/src/main/res/drawable/explore.xml" value="0.1" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/FigmaTikTokDowload/app/src/main/res/drawable/home.xml" value="0.1" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/FigmaTikTokDowload/app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.1745" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/FigmaTikTokDowload/app/src/main/res/drawable/ic_music2.xml" value="0.1745" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/FigmaTikTokDowload/app/src/main/res/drawable/trending.xml" value="0.1" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/FigmaTikTokDowload/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/FigmaTikTokDowload/app/src/main/res/layout/fragment_explore.xml" value="0.18541666666666667" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/FigmaTikTokDowload/app/src/main/res/layout/fragment_home.xml" value="0.33" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/FigmaTikTokDowload/app/src/main/res/layout/fragment_my_file.xml" value="0.18541666666666667" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/FigmaTikTokDowload/app/src/main/res/layout/fragment_trending.xml" value="0.3625" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/FigmaTikTokDowload/app/src/main/res/layout/lv_history.xml" value="0.365625" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/FigmaTikTokDowload/app/src/main/res/layout/lv_video.xml" value="0.33" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/FigmaTikTokDowload/app/src/main/res/menu/menu_bot_nav.xml" value="0.3614583333333333" />
       </map>
     </option>
