@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_height="156dp">
+
+    <ImageView
+        android:id="@+id/img_vid"
+        android:layout_width="104dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/tvtitle"
+        android:layout_width="230dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_toEndOf="@id/img_vid"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvig"
+        android:layout_width="230dp"
+        android:layout_height="18dp"
+        android:layout_below="@id/tvtitle"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_toEndOf="@+id/img_vid" />
+
+    <TextView
+        android:id="@+id/tv_file_name"
+        android:layout_width="230dp"
+        android:layout_height="18dp"
+        android:layout_below="@id/tvig"
+        android:layout_marginStart="16dp"
+        android:layout_toEndOf="@+id/img_vid" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_file_name"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@+id/img_vid"
+        android:background="@drawable/bgrdown3"
+        android:backgroundTint="@color/black"
+        android:paddingStart="8dp"
+        android:paddingTop="4dp"
+        android:paddingEnd="8dp"
+        android:paddingBottom="4dp"
+        android:text="No-watermark"
+        android:textColor="@color/white"
+        android:textSize="16dp" />
+
+    <CheckBox
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="57dp"
+        android:layout_toEndOf="@id/tvig" />
+
+</RelativeLayout>

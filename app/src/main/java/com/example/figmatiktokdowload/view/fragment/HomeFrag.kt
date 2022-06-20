@@ -10,18 +10,18 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-
 import com.example.figmatiktokdowload.R
 import com.example.figmatiktokdowload.databinding.FragmentHomeBinding
-import com.example.figmatiktokdowload.view.`interface`.ApiService
 import com.example.figmatiktokdowload.view.viewmodel.HomeViewModel
+import com.squareup.picasso.Picasso
 
 
 class HomeFrag : Fragment() {
     private lateinit var binding: FragmentHomeBinding
-   // private val homeViewModel: HomeViewModel by lazy { ViewModelProvider(this)[HomeViewModel::class.java] }
-    private lateinit var homeViewModel:HomeViewModel
+
+    private lateinit var homeViewModel: HomeViewModel
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -34,12 +34,15 @@ class HomeFrag : Fragment() {
             false
 
         )
-
+        homeViewModel = ViewModelProvider(this)[HomeViewModel::class.java]
+        binding.lifecycleOwner = this
+        binding.data = homeViewModel
         return binding.root
     }
 
     @SuppressLint("ServiceCast")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+
         super.onViewCreated(view, savedInstanceState)
         val clipboardManager =
             context?.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
@@ -52,11 +55,13 @@ class HomeFrag : Fragment() {
             }
         }
 
-        homeViewModel=ViewModelProvider(this).get(HomeViewModel::class.java)
-        binding.lifecycleOwner = this
-        binding.data = homeViewModel
-    }
 
+        val uriObserver =
+            Observer<String> { newUri -> Picasso.get().load(newUri).into(binding.imageVideo) }
+        homeViewModel.uri.observe(viewLifecycleOwner, uriObserver)
+
+
+    }
 
 
     override fun onDestroy() {
@@ -65,3 +70,5 @@ class HomeFrag : Fragment() {
     }
 
 }
+
+

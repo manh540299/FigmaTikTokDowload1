@@ -6,6 +6,54 @@
     android:weightSum="1"
     android:background="#E5E5E5"
     xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/setting"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="18.27dp"
+            android:src="@drawable/out_line" />
+
+        <ImageView
+            android:id="@+id/vm"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="13dp"
+            android:layout_toLeftOf="@id/tv"
+            android:src="@drawable/ic_vm" />
+
+        <ImageView
+            android:id="@+id/tv"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="13dp"
+            android:layout_toLeftOf="@id/setting"
+            android:src="@drawable/ic_tv" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_marginStart="10dp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="Tiktok Downloader"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
     <FrameLayout
         android:id="@+id/frame"
         android:layout_width="match_parent"

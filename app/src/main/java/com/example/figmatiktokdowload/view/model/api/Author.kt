@@ -1,3 +1,3 @@
 package com.example.figmatiktokdowload.view.model.api
 
-class Author
+data class Author(val unique_id:String )
